@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Quiz Hero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- You don't need to change noChange.js file. It's fine -->
+    <script src="./noChange.js" defer></script>
+    <!-- You don't need to change noChange.js file. It's fine -->
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        common: ["Rubik", "sans-serif"],
+                    },
+                },
+            },
+        };
+        const change = windowHref => {
+            window.location.href = windowHref;
+        }
+    </script>
+</head>
+
+<body class="bg-white font-common">
+    <!-- Header/Navbar section start -->
+    <header class="h-16 flex items-center shadow-sm">
+        <nav class="flex justify-between items-center w-9/12 mx-auto">
+            <div class="text-zinc-800 font-bold uppercase">
+                <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
+                <p class="text-[10px] font-normal capitalize -mt-1">
+                    Let's answer some question
+                </p>
+            </div>
+            <button onclick="change('index.html')" class="bg-green-600 font-light text-sm px-5 py-1 rounded text-white">
+                Quiz
+            </button>
+        </nav>
+    </header>
+    <!-- Header/Navbar section end -->
+    <main>
+        <section class="lg:w-9/12 md:w-[90%] w-[95%] mx-auto my-4">
+            <h1 class="text-lg"><span class="bg-orange-200 px-2 rounded">Que:1</span> Difference between <span
+                    class="bg-green-600 text-white px-2 rounded">Map</span> <span
+                    class="bg-green-600 text-white px-2 rounded">Filter</span> <span
+                    class="bg-green-600 text-white px-2 rounded">forEach</span> and <span
+                    class="bg-green-600 text-white px-2 rounded">Find</span></h1>
+            <ul class="text-base ml-8 my-2">
+                <li><span class="bg-orange-200 px-2 rounded">Map</span> Map is a callback function. It
+                    takes 3 parameters <span class="bg-green-600 text-white px-2 rounded">Element</span> <span
+                        class="bg-green-600 text-white px-2 rounded">index</span> and <span
+                        class="bg-green-600 text-white px-2 rounded">array</span>. It execute every elements of array.
+                    and return an array.</li>
+                <li><span class="bg-orange-200 px-2 rounded">Filter:</span> Filter returns an array. It find specific
+                    <span class="bg-green-600 text-white px-2 rounded">String,</span>
+                    <span class="bg-green-600 text-white px-2 rounded">Number.</span>
+                </li>
+                <li><span class="bg-orange-200 px-2 rounded">forEach:</span> It is a function. forEach apply only in an
+                    <span class="bg-green-600 text-white px-2 rounded">Array</span>. It returns single elements of an
+                    array.
+                </li>
+                <li><span class="bg-orange-200 px-2 rounded">Find:</span>Find function search single element of an
+                    array.
+                    <span class="bg-green-600 text-white px-2 rounded">Find</span> search by its condition.
+                </li>
+            </ul>
+        </section>
+        <section class="lg:w-9/12 md:w-[90%] w-[95%] mx-auto my-4">
+            <h1 class="text-lg"><span class="bg-orange-200 px-2 rounded">Que:2</span> Difference between
+                <span class="bg-green-600 text-white px-2 rounded">Local storage</span>
+                <span class="bg-green-600 text-white px-2 rounded">Session storage</span> and
+                <span class="bg-green-600 text-white px-2 rounded">Cookies</span>
+            </h1>
+            <ul class="text-base ml-8 my-2">
+                <li><span class="bg-orange-200 px-2 rounded">Local Storage: </span> It is a property. it allow you to
+                    store data on storage. If you close tab, browser or shutdown your computer this data doesn't delete.
+                </li>
+                <li><span class="bg-orange-200 px-2 rounded">Session Storage: </span> This is like local storage. If you
+                    close tab. It remove all data form storage.</li>
+                <li><span class="bg-orange-200 px-2 rounded">Cookies: </span> It is a amount of info that persist client
+                    side and server side.</li>
+            </ul>
+        </section>
+        <section class="lg:w-9/12 md:w-[90%] w-[95%] mx-auto my-4">
+            <h1 class="text-lg"><span class="bg-orange-200 px-2 rounded">Que:2</span>
+                How
+                <span class="bg-green-600 text-white px-2 rounded">quizTimer()</span>
+                and
+                <span class="bg-green-600 text-white px-2 rounded">chooseQuiz()</span>
+                are works?
+            </h1>
+            <ul class="text-base ml-8 my-2">
+                <li><span class="bg-orange-200 px-2 rounded">quizTimer Function: </span> quizTimer takes dismiss
+                    parameter. if dismiss parameter is equal true. quizTimer function is clearInterval and return form
+                    function. if dismiss returns false it goes another step and setInterval. here we select count
+                    container by id by querySelector then we set time into innHTML. it occer every 1000ms.</li>
+                <li><span class="bg-orange-200 px-2 rounded">chooseQuiz Function: </span> chooseQuiz takes two parameter
+                    index and givenAns. and create isExist array. and displayAnswere</li>
+            </ul>
+        </section>
+    </main>
+
+</body>
+
+</html>
